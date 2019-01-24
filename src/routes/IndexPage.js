@@ -13,7 +13,7 @@ class IndexPage extends React.Component{
 
     }
   }
-  componentWillMount(){
+  UNSAFE_componentWillMount(){
     global.ajax.get('/api/user', {}).then(res=>{
       
     })
