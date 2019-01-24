@@ -15,7 +15,7 @@ global.ajax = {
         if (xhr.readyState === 4 && xhr.status === 200) {
           try {
             let response = JSON.parse(xhr.responseText)
-            resolve(xhr.responseText)
+            resolve(response)
           } catch (err) {
             reject(err)
           }

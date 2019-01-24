@@ -13,9 +13,14 @@ class IndexPage extends React.Component{
 
     }
   }
+  componentWillMount(){
+    global.ajax.get('/api/user', {}).then(res=>{
+      
+    })
+  }
   componentDidMount(){
     global.ajax.get('/api/user', {}).then(res=>{
-      console.log(res.users)
+      
     })
   }
   add(){
