@@ -3,23 +3,40 @@ import { connect } from 'dva';
 import style from './IndexPage.css';
 import Counter from '@/components/counter/Counter.js'
 import { Link } from 'dva/router'
+import { Button } from 'antd'
 
 
 class IndexPage extends React.Component{
   constructor(props){
     super(props);
     this.state = {
-      users: []
+      users: [],
+      products: []
     }
   }
   UNSAFE_componentWillMount(){
     
   }
   componentDidMount(){
-    global.ajax.get('/api/user', {}).then(res=>{
-      let users = res.users;
+    this.getUsers()
+     .then(()=>this.getProducts())
+  }
+  getUsers(){
+    return new Promise((resolve,reject)=>{
+      global.ajax.get('/api/user', {}).then(res=>{
+        let users = res.users;
+        this.setState({
+          users
+        })
+        resolve()
+      })
+    })
+  }
+  getProducts(){
+    global.ajax.post('/api/product', {}).then(res=>{
+      let products = res.products;
       this.setState({
-        users
+        products
       })
     })
   }
@@ -35,6 +52,7 @@ class IndexPage extends React.Component{
         <div className={style.num}>{this.props.counter}</div>
         <Counter></Counter>
         <Link to='/detail'>详情</Link>
+        <Button type="primary">antd</Button>
       </div>
     );
   }
