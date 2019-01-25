@@ -1,6 +1,6 @@
-### dva的使用<a href="https://dvajs.com/guide" target="_blank>官方文档</a>
+### dva的使用<a href="https://dvajs.com/guide" target="_blank">官方文档</a>
 
-* <a href="https://github.com/mySkey/dva-demo" target="_blank>GIT仓库demo地址</a>
+* <a href="https://github.com/mySkey/dva-demo" target="_blank">GIT仓库demo地址</a>
 
 ### 一、安装 dva-cli
 
