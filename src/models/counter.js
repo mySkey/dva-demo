@@ -3,7 +3,7 @@ export default {
 
   namespace: 'counter',
 
-  state: 0,
+  state: 5,
 
   subscriptions: {
     setup({ dispatch, history }) {  // eslint-disable-line

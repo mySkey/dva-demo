@@ -1,0 +1,22 @@
+.counter{
+  width: 100px;
+  padding: 5px 15px;
+  box-sizing: border-box;
+  border-radius: 3px;
+  box-shadow: 0 0 15px -3px inset rgba(0, 0, 0, 0.3);
+  background: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.reduce{
+  color: #dd5866;
+  font-size: 22px;
+}
+.num{
+  color: cyan;
+}
+.add{
+  color: #00bcd4;
+  font-size: 18px;
+}
