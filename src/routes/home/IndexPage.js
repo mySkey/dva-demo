@@ -3,7 +3,6 @@ import { connect } from 'dva';
 import style from './IndexPage.css';
 import Counter from '@/components/counter/Counter.js'
 import { Link } from 'dva/router'
-import { Button } from 'antd'
 
 
 class IndexPage extends React.Component{
@@ -52,7 +51,6 @@ class IndexPage extends React.Component{
         <div className={style.num}>{this.props.counter}</div>
         <Counter></Counter>
         <Link to='/detail'>详情</Link>
-        <Button type="primary">antd</Button>
       </div>
     );
   }
